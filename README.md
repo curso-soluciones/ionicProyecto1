@@ -1,3 +1,2 @@
 # ionicProyecto1
-Primer proyecto Hibrido con ionic
-as
+Primer proyecto Hibrido con ionic :D
