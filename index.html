@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Proyecto Ionic by curso-soluciones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Proyecto Ionic</h1>
+      <h2 class="project-tagline">Primer proyecto Hibrido con ionic</h2>
+      <a href="https://github.com/curso-soluciones/ionicProyecto1" class="btn">View on GitHub</a>
+      <a href="https://github.com/curso-soluciones/ionicProyecto1/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/curso-soluciones/ionicProyecto1/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h3>
+<a id="introducción" class="anchor" href="#introducci%C3%B3n" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introducción</h3>
+
+<p>En este curso aprenderás a crear aplicaciones móviles híbridas con el framework ionicframework, seleccionamos este framework porque además de ser bonito visualmente usa como arquitectura angularJS, el cual veremos más adelante tiene muchas ventajas.
+Del lado de <strong>back end</strong> usaremos <strong>Java</strong> con el framework <strong>Spring</strong> y como framework de mapeo utilizaremos <strong>Hibernate</strong>.</p>
+
+<h3>
+<a id="creación-de-una-aplicación" class="anchor" href="#creaci%C3%B3n-de-una-aplicaci%C3%B3n" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creación de una aplicación.</h3>
+
+<p>Una vez instalado  <a href="https://nodejs.org/en/">node.js</a>  para el sistema operativo en el que vayas a trabajar el primer paso es instalar en la maquina ionic con ayuda de node.js, para ello vas a ejecutar en una terminal la siguiente línea.</p>
+
+<pre><code>$ npm install -g cordova ionic
+</code></pre>
+
+<p>Posteriormente vas a crear una aplicación, para ello vas a espedir la siguiente línea de comandos</p>
+
+<pre><code>$ ionic start MiAplicacion blank
+</code></pre>
+
+<p>La linea anterior crea una aplicación en blanco, <strong>MiAplicacion</strong> es el nombre con que se generará una carpeta donde estarán contenidos todos los archivos y recursos de tu aplicación, puedes sustituir la opción <strong>blank</strong> con <strong>tabs</strong> o <strong>sidemenu</strong> y se generarán plantillas ya más completas.</p>
+
+<p>Una vez creado el proyecto vas a observar una serie de carpetas, este proyecto es para trabajarlo directamente con <strong>nodejs</strong> , sin embargo lo vamos a poner en producción con NetBeans y del portal oficial de <a href="https://build.phonegap.com/">PhoneGap</a>. Vas a copiar el contenido de la carpeta especificada con <strong>wwww</strong>, en tu proyecto debes tener las siguientes carpetas a copiar:
+<img src="http://campitos-ley.whelastic.net/soluciones/soluciones1_1.png" alt="Arquietctura de un proyecto básico"></p>
+
+<p>Todas esas carpetas las deberás de copiar en un proyecto nuevo html5 hecho en Netbeans, en este caso le vamos a poner por nombre <strong>ionicProyecto1</strong>. Es muy importante que en Netbeans borres el archivo <strong>index.html</strong> que se generó con al creación del proyecto, ya que vamos a copiar la version del <strong>index.html</strong> que se creo con ionic. En la siguiente imágen se muestra como debe de quedar una vez copiadas las carpetas en el proyecto de Netbeans.</p>
+
+<p><img src="http://campitos-ley.whelastic.net/soluciones/soluciones1_2.png" alt="Arquietctura de un proyecto básico"></p>
+
+<p>En proyecto edita el archivo <strong>app.js</strong>, el cual se encuentra dentro de la carpeta <strong>js</strong>. Ionic genera la plantilla del proyecto junto con todo lo necesario para que puedas utilizar <strong>angularJS</strong>,  En el archivo <strong>app.js</strong> vamos a agregar un controller que se llamara <strong>'ctrlPrincipal'</strong>  como se ilustra en el siguiente código.</p>
+
+<pre><code>angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+
+    if(window.cordova &amp;&amp; window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+}).controller('ctrlPrincipal',function($scope, $http){
+    $scope.mensaje='Bienvenido a angular con ionic!!';
+})
+
+</code></pre>
+
+<p>Ahora vas a editar el archivo <strong>index.html</strong> y vamos a adaptarlo para invocar el controlador que ya hemos introducido en el archivo <strong>app.js</strong>. Modifica el archivo para que quede de la siguiente manera.</p>
+
+<pre><code>  &lt;body ng-app="starter"&gt;
+
+    &lt;ion-pane&gt;
+        &lt;ion-header-bar class="bar-stable" ng-controller="ctrlPrincipal"&gt;
+        &lt;h1 class="title"&gt;{{mensaje}}&lt;/h1&gt;
+      &lt;/ion-header-bar&gt;
+      &lt;ion-content&gt;
+      &lt;/ion-content&gt;
+    &lt;/ion-pane&gt;
+  &lt;/body&gt;
+</code></pre>
+
+<p>En la barra de la aplicación hemos utilizado <strong>{{mensaje}}</strong> para que utilice como modelo esta variable de tipo <strong>$scope</strong> en angularJS.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/curso-soluciones/ionicProyecto1">Proyecto Ionic</a> is maintained by <a href="https://github.com/curso-soluciones">curso-soluciones</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
