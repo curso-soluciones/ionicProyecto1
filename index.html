@@ -24,6 +24,8 @@
 <li><a href="#arquitectura">Arquitectura de una aplicación Ionic</a></li>
 </ul>
 
+<div id="introduccion"></div>
+
 <h3>
 <a id="introducción" class="anchor" href="#introducci%C3%B3n" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introducción</h3>
 
@@ -51,6 +53,17 @@ Del lado de <strong>back end</strong> usaremos <strong>Java</strong> con el fram
 <p>Todas esas carpetas las deberás de copiar en un proyecto nuevo html5 hecho en Netbeans, en este caso le vamos a poner por nombre <strong>ionicProyecto1</strong>. Es muy importante que en Netbeans borres el archivo <strong>index.html</strong> que se generó con al creación del proyecto, ya que vamos a copiar la version del <strong>index.html</strong> que se creo con ionic. En la siguiente imágen se muestra como debe de quedar una vez copiadas las carpetas en el proyecto de Netbeans.</p>
 
 <p><img src="http://campitos-ley.whelastic.net/soluciones/soluciones1_2.png" alt="Arquietctura de un proyecto básico"></p>
+
+
+
+<div id="arquitectura"></div>
+
+<h2>
+<a id="arquirectura-de-una-aplicación-ionic" class="anchor" href="#arquirectura-de-una-aplicaci%C3%B3n-ionic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arquirectura de una aplicación Ionic</h2>
+
+<p>Como en el proyecto anterior creamos una nueva aplicación en este caso con la opción <strong>blank</strong>, la llamaremos <strong>AplicacionEventos</strong>
+Procedemos como en el ejercicio anterior, de la carpeta que se genere, buscamos la carpeta <strong>wwww</strong>, y creamos un nuevo proyecto <strong>html5</strong> en Netbeans, borramos el archivo index.html que se genera y en la carpeta raíz pegamos el contenido de carpetas y archivos que están dentro de la carpeta wwww. 
+Nota:<strong> NO PEGUES LA CARPETA wwww,  SE PEGA EL CONTENIDO DE ELLA</strong>.</p>
 
 <p>En proyecto edita el archivo <strong>app.js</strong>, el cual se encuentra dentro de la carpeta <strong>js</strong>. Ionic genera la plantilla del proyecto junto con todo lo necesario para que puedas utilizar <strong>angularJS</strong>,  En el archivo <strong>app.js</strong> vamos a agregar un controller que se llamara <strong>'ctrlPrincipal'</strong>  como se ilustra en el siguiente código.</p>
 
@@ -85,11 +98,6 @@ Del lado de <strong>back end</strong> usaremos <strong>Java</strong> con el fram
     &lt;/ion-pane&gt;
   &lt;/body&gt;
 </code></pre>
-
-<div id="arquitectura"></div>
-
-<h2>
-<a id="arquirectura-de-una-aplicación-ionic" class="anchor" href="#arquirectura-de-una-aplicaci%C3%B3n-ionic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arquirectura de una aplicación Ionic</h2>
 
 <p>En la barra de la aplicación hemos utilizado <strong>{{mensaje}}</strong> para que utilice como modelo esta variable de tipo <strong>$scope</strong> en angularJS.</p>
 
