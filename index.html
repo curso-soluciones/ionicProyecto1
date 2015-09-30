@@ -65,7 +65,7 @@ Del lado de <strong>back end</strong> usaremos <strong>Java</strong> con el fram
 Procedemos como en el ejercicio anterior, de la carpeta que se genere, buscamos la carpeta <strong>wwww</strong>, y creamos un nuevo proyecto <strong>html5</strong> en Netbeans, borramos el archivo index.html que se genera y en la carpeta raíz pegamos el contenido de carpetas y archivos que están dentro de la carpeta wwww. 
 Nota:<strong> NO PEGUES LA CARPETA wwww,  SE PEGA EL CONTENIDO DE ELLA</strong>.</p>
 
-<p>En proyecto edita el archivo <strong>app.js</strong>, el cual se encuentra dentro de la carpeta <strong>js</strong>. Ionic genera la plantilla del proyecto junto con todo lo necesario para que puedas utilizar <strong>angularJS</strong>,  En el archivo <strong>app.js</strong> vamos a agregar un controller que se llamara <strong>'ctrlPrincipal'</strong>  como se ilustra en el siguiente código.</p>
+<p>Ionic genera la plantilla del proyecto junto con todo lo necesario para que puedas utilizar <strong>angularJS</strong>,  En el archivo <strong>app.js</strong> vamos a agregar un controller que se llamara <strong>'ctrlPrincipal'</strong>  como se ilustra en el siguiente código.</p>
 
 <pre><code>angular.module('starter', ['ionic'])
 
@@ -99,7 +99,13 @@ Nota:<strong> NO PEGUES LA CARPETA wwww,  SE PEGA EL CONTENIDO DE ELLA</strong>.
   &lt;/body&gt;
 </code></pre>
 
-<p>En la barra de la aplicación hemos utilizado <strong>{{mensaje}}</strong> para que utilice como modelo esta variable de tipo <strong>$scope</strong> en angularJS.</p>
+<p>Angular maneja el patron de diseño MVC (Model View Controller), en este patrón el bloque central es el controller, en el se comunican la capa vista (en este caso el tu pagina html y als componentes que existen en el DOM) y las componentes del Model, las cuales se relacionan a los datos que van a enviarse o recibirse del <strong>Front End</strong>. 
+En la capa controller en angular podemos comunicarnos con el model y la vista mediante la variable <strong>$scope</strong> que recibe como argumento la función de controller respectivo. Con esta variable generas cualquier tipo de atributos que serán comunicados y usados en tu DOM. Asi en este ejercicio creamos la variable <strong>$scope.mensaje</strong>, la cual se usa en el DOM con la sintaxis {{mensaje}} 
+En la barra de la aplicación hemos utilizado <strong>{{mensaje}}</strong> donde puedes observar que toma el valor proporcioando en el controller.</p>
+
+<p>Ejercicio 1: adicional vas a agregar un botón a tu html y cuando oprimas el boto se debe de desplegar un mensaje en la parte inferior que diga <strong>buen día!!!°</strong>.</p>
+
+<p>Ejercicio 2: Ahora vas a agregar un campo de texto que diga: <strong>Introduce tu nombre</strong>, cuando escribas sobre él deberá desplegarse en la parte de abajo ul contenido de lo que estas escribiendo. Esto es para que entiendas el concepto de angular de ** two way binding**-</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/curso-soluciones/ionicProyecto1">Proyecto Ionic</a> is maintained by <a href="https://github.com/curso-soluciones">curso-soluciones</a>.</span>
