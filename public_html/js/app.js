@@ -18,7 +18,7 @@ angular.module('starter', ['ionic'])
   });
 }).controller('ctrlPrincipal',function($scope, $http){
     $scope.mensaje='Bienvenido a angular con ionic!!';
-     $http.get('http://clima.elasticbeanstalk.com/estacion/temperatura').success(function(data){
-         console.log(data.length+" temepra"+data[0].vientoIntensidad);
+     $http.get('http://campitos.elasticbeanstalk.com/estacion/temperatura').success(function(data){
+         console.log(data.length+" temperatura: "+data[11].temperatura);
      });
 })
