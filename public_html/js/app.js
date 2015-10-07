@@ -16,9 +16,16 @@ angular.module('starter', ['ionic'])
       StatusBar.styleDefault();
     }
   });
-}).controller('ctrlPrincipal',function($scope, $http){
+}).controller('ctrlPrincipal',function($scope, $http, $filter){
     $scope.mensaje='Bienvenido a angular con ionic!!';
+    $scope.temperatura='';
+   // $scope.date = new Date();
+   //   $scope.ddMMMMyyyy = $filter('date')(new Date(), 'dd, MMMM yyyy');
+     $scope.hh = $filter('date')(new Date(), 'HH');
+    console.log("La hora es"+$scope.hh);
      $http.get('http://campitos.elasticbeanstalk.com/estacion/temperatura').success(function(data){
-         console.log(data.length+" temperatura: "+data[11].temperatura);
+        // console.log(data.length+" temperatura: "+data[12].temperatura);
+         $scope.temperatura=data[$scope.hh].temperatura;
+         
      });
 })
