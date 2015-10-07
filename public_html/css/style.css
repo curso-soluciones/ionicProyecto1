@@ -1,6 +1,9 @@
 /* Empty. Add your own CSS if you like */
 
-
+@font-face{
+    src:url(RobotoSlab-Thin.ttf);
+    font-family: 'campitos';
+}
 #fondo{
 background:#ffa84c; /* Old browsers */
 background: -moz-linear-gradient(-45deg, #ffa84c 0%, #ff7b0d 62%, #ff7b0d 62%, #ff7b0d 77%); /* FF3.6+ */
@@ -11,8 +14,9 @@ background: -ms-linear-gradient(-45deg, #ffa84c 0%,#ff7b0d 62%,#ff7b0d 62%,#ff7b
 background: linear-gradient(135deg, #ffa84c 0%,#ff7b0d 62%,#ff7b0d 62%,#ff7b0d 77%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
 #titulo{
-    font-family: 'Roboto', sans-serif;
+    font-family:'campitos';
     margin: 15px;
     font-size: 30px;
     font-weight: 300;
@@ -20,7 +24,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', end
     text-align: center;
 }
 p{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'campitos', sans-serif;
     margin: 15px;
     font-size: 20px;
     font-weight: 300;
@@ -29,7 +33,7 @@ p{
     
 }
 #temperatura{
-        font-family: 'Roboto', sans-serif;
+        font-family: 'campitos', sans-serif;
     margin: 15px;
     font-size: 30px;
     font-weight: 300;
